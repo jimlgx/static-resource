@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!-- 运行测试 pom -->
+	<modelVersion>4.0.0</modelVersion>
+	<!-- -->
+	<groupId>org.jimlgx.static</groupId>
+	<artifactId>static-resource</artifactId>
+	<packaging>pom</packaging>
+	<version>0.1-build201209-SNAPSHOT</version>
+
+	<modules>
+		<module>static-resource-dojo</module>
+	</modules>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+				<executions>
+					<execution>
+						<id>skinny-war</id>
+						<phase>package</phase>
+						<goals>
+							<goal>war</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<classifier>skinny-war</classifier>
+					<!-- 打war包排除的文件 ,WEB-INF/lib/*.jar,WEB-INF/classes/** -->
+					<packagingExcludes>WEB-INF/**,/**/test/**,/**/demo/**,/**/readme.txt</packagingExcludes>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>8.1.3.v20120416</version>
+				<configuration>
+					<webApp>
+						<contextPath>/${project.artifactId}</contextPath>
+						<defaultsDescriptor>src/test/resources/webdefault.xml</defaultsDescriptor>
+					</webApp>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
