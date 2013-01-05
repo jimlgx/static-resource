@@ -6,10 +6,12 @@
 	<groupId>org.jimlgx.static</groupId>
 	<artifactId>static-resource</artifactId>
 	<packaging>pom</packaging>
-	<version>0.1-build201209-SNAPSHOT</version>
+	<version>0.1.2-build201301-SNAPSHOT</version>
 
 	<modules>
 		<module>static-resource-dojo</module>
+		<module>static-resource-easyui</module>
+		<module>static-resource-bootstrap</module>
 	</modules>
 
 	<build>

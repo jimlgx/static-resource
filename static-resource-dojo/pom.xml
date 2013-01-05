@@ -6,7 +6,7 @@
 	<parent>
 		<artifactId>static-resource</artifactId>
 		<groupId>org.jimlgx.static</groupId>
-		<version>0.1-build201209-SNAPSHOT</version>
+		<version>0.1.2-build201301-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
 	<artifactId>static-resource-dojo</artifactId>
