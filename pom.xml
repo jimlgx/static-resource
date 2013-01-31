@@ -9,9 +9,12 @@
 	<version>0.1.2-build201301-SNAPSHOT</version>
 
 	<modules>
-		<module>static-resource-dojo</module>
+		<module>static-resource-jquery</module>
+		<module>static-resource-jqueryui</module>
 		<module>static-resource-easyui</module>
 		<module>static-resource-bootstrap</module>
+		<module>static-resource-dojo</module>
+		<module>static-resource-ztree</module>
 	</modules>
 
 	<build>
