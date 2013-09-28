@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+<meta charset="utf-8">
+<title>审计报表平台</title>
+<link rel="stylesheet" href="css/app.css" />
+<link rel="stylesheet"
+	href="../webjars/bootstrap/2.3.0/css/bootstrap.css" />
+<link rel="stylesheet"
+	href="../webjars/bootstrap/2.3.0/css/bootstrap-responsive.css" />
+</head>
+<div class="navbar navbar-inverse navbar-static-top">
+	<div class="navbar-inner">
+		<a class="brand" href="#">审计报表平台</a>
+		<ul class="nav">
+			<li><a href="#/demomodel" class="demomodel">键值测试</a></li>
+			<li><a href="#/skills" class="skills">站位菜单</a></li>
+		</ul>
+		<ul class="nav pull-right">
+			<li><a href="#logout" class="logout">Logout</a></li>
+			<li><p class="navbar-text" app-version>V</p></li>
+		</ul>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+
+		<!-- Main title styled ng-controller="LoginController"-->
+		<div class="span12" ng-controller="MyCtrl1">
+			<h1>欢迎您！{{username}}</h1>
+		</div>
+
+	</div>
+	<div ng-view></div>
+
+	<div class="ui-layout-center">
+		Center
+		<div
+			style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; overflow: hidden"
+			ng-grid="gridOptions"></div>
+	</div>
+</div>
+
+
+<script src="../webjars/jquery/1.9.0/jquery.js"></script>
+<script src="../webjars/bootstrap/2.3.0/js/bootstrap.js"></script>
+<script src="../webjars/angularjs/1.0.7/angular.js"></script>
+<script src="../webjars/angularjs/1.0.7/angular-resource.js"></script>
+<script src="../webjars/angularjs/1.0.7/angular-bootstrap.js"></script>
+<script src="../webjars/angularjs/1.0.7/angular-bootstrap-prettify.js"></script>
+<script src="../webjars/angularjs/1.0.7/angular-cookies.js"></script>
+<script src="../webjars/angularjs/1.0.7/angular-loader.js"></script>
+<script src="../webjars/angularjs/1.0.7/angular-sanitize.js"></script>
+<script src="../webjars/angularjs/1.0.7/angular-scenario.js"></script>
+<!-- <script src="../webjars/angularjs/1.0/ng-grid.js"></script> -->
+<script src="lib/ng-grid/ng-grid.debug.js"></script>
+<!-- <script src="../webjars/angularjs/1.0/ng-grid.min.js"></script> -->
+
+<script src="js/app.js"></script>
+<script src="js/services.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/directives.js"></script>
+</body>
+</html>
