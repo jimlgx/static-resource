@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <echo message="moving resources"/>
+  <copy todir="D:\WORKSPACE\GitHub\static-resource\static-resource-jqgrid\target\classes/META-INF/resources/static-resource">
+    <fileset dir="src/main/webapp/static-resource/"/>
+  </copy>
+</target>
+</project>
